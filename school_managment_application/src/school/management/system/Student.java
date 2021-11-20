@@ -108,14 +108,26 @@ public class Student extends Person{
         System.out.println(this.subjects.get(subjectIndex).toString());
     }
 
+    /**
+     * setter for students grade
+     * @param grade grade student will be in now
+     */
     public void setGrade(int grade) {
         this.grade = grade;
     }
 
+    /**
+     * getter for grade field
+     * @return grade fiedl
+     */
     public int getGrade() {
         return grade;
     }
 
+    /**
+     * Method for increasing feesPaid field of Student
+     * @param fee increment of feesPaid
+     */
     public void payFees(int fee) {
         if (isAmountPositive(fee)) {
             this.feesPaid += fee;
@@ -131,23 +143,44 @@ public class Student extends Person{
         }
     }
 
+    /**
+     * getter for fees feesPaid field
+     * @return feesPaid field
+     */
     public int getFeesPaid() {
         return feesPaid;
     }
 
+    /**
+     * getter for feesTotal field
+     * @return feesTotal field
+     */
     public int getFeesTotal() {
         return feesTotal;
     }
 
+    /**
+     * toString() method for Student
+     * @return String with students name, id, grade and fees balance
+     */
     @Override
     public String toString() {
         return "\n\nSTUDENT\n\tId: " + this.id + "\n\tName: " + this.name + "\n\tGrade: " + grade + "\n\tFees paid/fees total: " + feesPaid + "/" + feesTotal;
     }
 
+    /**
+     * Method for checking if amount > 0
+     * @param amount amount to be checked
+     * @return boolean
+     */
     public boolean isAmountPositive(int amount) {
         return amount > 0;
     }
 
+    /**
+     * Methods for checking if paidFees > totalFees
+     * @return feesPaid capped at feesTotal
+     */
     public boolean areFeesOverPaid() {
         return this.feesPaid > 10000;
     }

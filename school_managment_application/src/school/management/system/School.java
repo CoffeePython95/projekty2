@@ -481,14 +481,18 @@ public class School {
         students.add(new Student("John", 10009,8));
         students.add(new Student("Oleg", 10010,4));
 
-        teachers.add(new Teacher("Anna", 90001,2600));
+        teachers.add(new Teacher("Anna", 90001));
         teachers.add(new Teacher("Jo", 90002,3700));
         teachers.add(new Teacher("Tim", 90003,3600));
+        teachers.get(0).receiveSalary();
+        teachers.get(2).receiveSalary();
 
-        otherEmployees.add(new OtherEmployee("Tom", 80001, 1500, "janitor"));
+        otherEmployees.add(new OtherEmployee("Tom", 80001,"janitor"));
         otherEmployees.add(new OtherEmployee("Sandra", 80002, 1400, "cook"));
         otherEmployees.add(new OtherEmployee("Ellen", 80003, 1300, "cleaner"));
         otherEmployees.add(new OtherEmployee("Barbara", 80004, 1400, "nurse"));
+        otherEmployees.get(1).receiveSalary();
+        otherEmployees.get(2).receiveSalary();
 
         student1.addSubjectGrade(0, 5);
         student1.addSubjectGrade(0, 4);

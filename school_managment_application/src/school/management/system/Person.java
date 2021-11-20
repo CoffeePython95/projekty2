@@ -17,7 +17,7 @@ abstract class Person {
      * @param id id of person
      */
     Person(String name, int id) {
-        this.name = name;
+        this.name = name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase();
         this.id = id;
     }
 
